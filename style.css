@@ -1,0 +1,116 @@
+/*
+Theme Name: Meridian Studio Theme
+Theme URI: https://meridian.studio
+Author: Your Name
+Description: A production-grade custom WordPress theme for Meridian Studio.
+Version: 1.0.0
+*/
+
+:root {
+    /* Colors */
+    --color-ink: #1A1A17;
+    --color-paper: #F1EEE7;
+    --color-clay: #C0553A;
+    --color-stone: #76726A;
+    --color-mist: #DED7CB;
+
+    /* Fonts */
+    --font-display: 'Newsreader', serif;
+    --font-body: 'Hanken Grotesk', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+}
+
+body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+}
+/* ultimate WordPress Menu Fix */
+.main-navigation, 
+.main-navigation div, 
+.main-navigation ul {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.main-navigation ul {
+    list-style: none !important;
+    list-style-type: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main-navigation ul li {
+    list-style: none !important;
+    display: inline-block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.main-navigation ul li a {
+    text-decoration: none !important;
+    color: var(--color-ink) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 14px !important;
+}
+
+.main-navigation ul li a:hover {
+    color: var(--color-clay) !important;
+}
+
+/* ==========================================================================
+   MOBILE & RESPONSIVE STYLES (മൊബൈൽ വ്യൂവിനുള്ള പ്രത്യേക കോഡ്)
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    /* 1. ഹെഡർ മൊബൈലിൽ ഒതുങ്ങി നിൽക്കാൻ */
+    .header-container {
+        display: block !important; /* ഫ്ലെക്സ് മാറ്റി ബ്ലോക്ക് ആക്കുന്നു */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .logo {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 20px !important;
+    }
+
+    /* 2. മെനു ലിങ്കുകൾ ഒന്നിന് താഴെ ഒന്നായി വരാൻ */
+    .main-menu-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px !important;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    /* 3. 'Start a project' ബട്ടൺ മൊബൈലിൽ സെന്റർ ആക്കാൻ */
+    .btn-cta {
+        display: inline-block;
+        margin-top: 10px;
+        width: auto;
+        padding: 12px 24px !important;
+    }
+
+    /* 4. പേജുകളിലെ വലിയ ഹെഡിംഗുകൾ മൊബൈലിന് പാകത്തിന് ചെറുതാക്കാൻ */
+    h1 {
+        font-size: 32px !important; /* 42px-ൽ നിന്ന് 32px ആക്കി കുറച്ചു */
+        line-height: 1.2;
+    }
+
+    /* 5. ഫൂട്ടർ ഭാഗം മൊബൈലിൽ സെന്റർ ആക്കാൻ */
+    .site-footer div {
+        display: block !important;
+        text-align: center;
+    }
+
+    .site-footer p {
+        margin-bottom: 15px !important;
+    }
+}
